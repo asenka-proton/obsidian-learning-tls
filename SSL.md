@@ -1,0 +1,3 @@
+**SSL** (Secure Sockets Layer) est l'ancêtre du protocole [[TLS]]. Bien qu'on utilise encore très souvent le terme _"SSL"_ par habitude, il est aujourd'hui **obsolète** et considéré comme **non sécurisé**. 
+
+TLS a été créé pour corriger les failles de sécurité majeures de SSL. Aujourd'hui, quand tu vois du **[[HTTPS]]**, c'est techniquement du **TLS** qui tourne sous le capot, mais le nom SSL est resté ancré dans le langage courant pour désigner la sécurisation des échanges web.
