@@ -55,8 +55,8 @@ sequenceDiagram
     Note right of S: Le Serveur consulte son <br/>TrustStore pour vérifier<br/>si le certificat du Client<br/>est signé par une CA de confiance.
 
     Note over C, S: Étape 3 : Échange de clés (Asymétrique)
-    C->>S: "On a tous les deux prouvé notre identité. <br/>Voici une clé de session chiffrée avec ta Clé Publique."
-    Note over S: Le Serveur déchiffre avec sa Clé Privée<br/>(issue de son KeyStore).
+    C->>S: "On a tous les deux prouvé notre identité. <br/>Voici une clé de session chiffrée avec ta 🔑 Clé Publique."
+    Note over S: Le Serveur déchiffre avec sa 🔑 Clé Privée<br/>(issue de son KeyStore).
     
     Note over C, S: Étape 4 : Communication Sécurisée (Symétrique)
     C->>S: "Ok, on utilise maintenant la clé de session."

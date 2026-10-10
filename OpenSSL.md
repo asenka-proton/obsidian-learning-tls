@@ -40,14 +40,14 @@ openssl req -x509 -new -key mon_serveur.key -out mon_serveur.crt -days 365
 ```
 *C'est la commande magique pour avoir du HTTPS sur ton PC de dev sans payer ni configurer de CA.*
 
-### 4. Vérifier un certificat à distance (Debug)
+### 4. Vérifier un [[certificat]] à distance (Debug)
 Si tu veux voir les détails du certificat d'un site web (comme Google) pour vérifier sa chaîne de confiance :
 ```bash
 openssl s_client -connect google.com:443 -showcerts
 ```
 *C'est très utile pour voir si un serveur utilise bien le bon protocole ou pour voir qui a signé son certificat.*
 
-### 5. Convertir un certificat (Exemple : pour le format PKCS12)
+### 5. Convertir un [[certificat]] (Exemple : pour le format PKCS12)
 Parfois, un logiciel te demande un fichier `.p12` ou `.pfx` au lieu d'un `.crt`. OpenSSL permet de convertir :
 ```bash
 openssl pkcs12 -export -out certificat.p12 -inkey mon_serveur.key -in mon_serveur.crt
