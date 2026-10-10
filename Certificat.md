@@ -19,6 +19,8 @@ Pour comprendre un certificat, imagine un **passeport physique** :
 **Sans certificat :** Quelqu'un pourrait te montrer une carte d'identité faite maison. Tu as la clé publique, mais tu n'as aucune preuve qu'elle appartient à la vraie banque.
 **Avec certificat :** Le gouvernement (une autorité de confiance) a "tamponné" le document pour dire : *"Je certifie que cette clé publique appartient bien à cette banque"*.
 
+
+
 ## 📦 Que contient un certificat ? 
 
 Même si c'est un fichier complexe, un certificat contient principalement :
