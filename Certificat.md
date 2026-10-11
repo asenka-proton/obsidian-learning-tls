@@ -9,6 +9,8 @@ C'est un fichier électronique qui lie une **identité** (un nom de domaine comm
 
 Il sert à prouver que "la [[clé publique]] que tu vois appartient bien au propriétaire que tu penses être".
 
+> On parle aussi de _"Certificat de clé publique"_ ([[TLS]])
+
 ## 🛂 L'analogie du Passeport
 
 Pour comprendre un certificat, imagine un **passeport physique** :
@@ -20,7 +22,6 @@ Pour comprendre un certificat, imagine un **passeport physique** :
 **Avec certificat :** Le gouvernement (une autorité de confiance) a "tamponné" le document pour dire : *"Je certifie que cette clé publique appartient bien à cette banque"*.
 
 
-
 ## 📦 Que contient un certificat ? 
 
 Même si c'est un fichier complexe, un certificat contient principalement :
@@ -29,6 +30,13 @@ Même si c'est un fichier complexe, un certificat contient principalement :
 *   **L'Émetteur :** Qui a délivré le certificat (ex: Let's Encrypt, DigiCert).
 *   **La Date d'expiration :** Jusqu'à quand le certificat est valide.
 *   **La [[Signature]] Numérique :** La preuve cryptographique que l'émetteur a bien validé ce certificat.
+
+## 📄 Standard [[X.509]]
+
+**[[X.509]]** est le standard international qui définit le format et la structure des **certificats de clés publiques**.
+
+Si un certificat est une "carte d'identité", [[X.509 ]]est la **norme** qui définit exactement quelles informations doivent figurer sur cette carte, dans quel ordre, et comment elles doivent être structurées techniquement.
+
 
 ## 🔗 La Chaîne de Confiance (Chain of Trust)
 

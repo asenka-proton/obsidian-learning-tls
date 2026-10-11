@@ -6,7 +6,7 @@
       {
         "id": "6554320f7e6baf21",
         "type": "tabs",
-        "dimension": 51.32504056246619,
+        "dimension": 51.97766402978129,
         "children": [
           {
             "id": "96f3b9949433b4b6",
@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PKI.md",
+                "file": "PFS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "PKI"
+              "title": "PFS"
             },
             "group": "3a13fd40f6dfe289"
           }
@@ -28,7 +28,7 @@
       {
         "id": "f23a741ac68046e0",
         "type": "tabs",
-        "dimension": 48.67495943753381,
+        "dimension": 48.022335970218705,
         "children": [
           {
             "id": "6ec5a54a50f06e75",
@@ -36,7 +36,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "PKI.md",
+                "file": "PFS.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -64,7 +64,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graphique de PKI"
+              "title": "Graphique de PFS"
             },
             "group": "3a13fd40f6dfe289"
           }
@@ -245,35 +245,35 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6ec5a54a50f06e75",
+  "active": "96f3b9949433b4b6",
   "lastOpenFiles": [
+    "Signature.md",
+    "PFS.md",
+    "Key Exchange.md",
+    "TLS.md",
+    "mTLS.md",
+    "Handshake.md",
+    "Clé de Session.md",
+    "OpenSSL.md",
+    "CSR.md",
+    "Certificat.md",
+    "SAN.md",
+    "X.509.md",
+    "Clé Publique.md",
+    "Certificat auto-signé.md",
+    "CRL.md",
     "OCSP.md",
+    "PKI.md",
     "CA.md",
     "Trust Store.md",
-    "Certificat auto-signé.md",
-    "Certificat.md",
-    "TLS.md",
     "Cryptographie Asymétrique.md",
     "Chiffrement.md",
     "Clé Privée.md",
-    "Signature.md",
-    "Clé Publique.md",
-    "OpenSSL.md",
-    "PKI.md",
     "Key Store.md",
     "TrustStore.md",
-    "Handshake.md",
-    "mTLS.md",
-    "Clé de Session.md",
     "Sans titre 1.base",
     "Sans titre.base",
-    "CSR.md",
     "Clé Secrète.md",
-    "SSL.md",
-    "HTTPS.md",
-    "Cryptographie Symétrique.md",
-    "chiffrer.md",
-    "file:/home/asenka/Documents/cv/cv.md",
-    "Truc.md"
+    "SSL.md"
   ]
 }

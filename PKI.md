@@ -14,7 +14,7 @@ Pour qu'une PKI fonctionne, elle a besoin de plusieurs acteurs et outils :
 
 1.  **[[CA]] (Certificate Authority) :** L'autorité qui signe et délivre les certificats.
 2.  **RA (Registration Authority) :** Le "guichet". C'est l'entité qui vérifie l'identité du demandeur avant de dire à la CA : *"Ok, tu peux lui donner un certificat"*. (Souvent, la CA et la RA sont gérées par la même entreprise, mais ce sont deux rôles distincts).
-3.  **[[Trust Store]] :** La liste des [[CA]] racines en lesquelles ton système fait confiance (vu dans la note précédente).
+3.  **[[Trust Store]] :** La liste des [[CA]] racines en lesquelles ton système fait confiance.
 4.  **[[CRL]] (Certificate Revocation List) :** Une "liste noire" de certificats qui ont été annulés avant leur date d'expiration (ex: clés volées).
 5.  **[[OCSP]] (Online Certificate Status Protocol) :** Un service en ligne qui permet de vérifier en temps réel si un certificat est toujours valide.
 

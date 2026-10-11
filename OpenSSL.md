@@ -21,6 +21,7 @@ En tant que développeur, tu utiliseras OpenSSL pour :
 *Note : Ces commandes sont les standards sur Ubuntu. Elles utilisent souvent la génération de clés RSA 2048 bits (le standard actuel).*
 
 ### 1. Créer une paire de clés ([[Clé Privée|Privée]] et [[Clé Publique|Public]])
+
 Pour créer une clé privée (le fichier `.key`) :
 ```bash
 openssl genrsa -out mon_serveur.key 2048

@@ -3,9 +3,11 @@ _Le TLS Handshake (La "Poignée de main")_
 ---
 ## 📌 Définition simple
 
-Le **TLS Handshake** est la phase de négociation qui se produit au tout début d'une connexion [[HTTPS]]. C'est le moment où le client (ton navigateur) et le serveur se mettent d'accord sur **comment** ils vont communiquer de manière sécurisée.
+Le **[[TLS]] Handshake** est la phase de négociation qui se produit au tout début d'une connexion [[HTTPS]]. C'est le moment où le client (ton navigateur) et le serveur se mettent d'accord sur **comment** ils vont communiquer de manière sécurisée.
 
 C'est durant cette phase que les concepts de clés asymétriques, de certificats et de certificats de confiance sont utilisés.
+
+C'est aussi durant cette phase que se produit l'[[Key Exchange|échange de clés]].
 
 ## 💡 La logique globale : "Le meilleur des deux mondes"
 
