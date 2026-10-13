@@ -6,7 +6,7 @@
       {
         "id": "6554320f7e6baf21",
         "type": "tabs",
-        "dimension": 51.97766402978129,
+        "dimension": 51.977664029781295,
         "children": [
           {
             "id": "96f3b9949433b4b6",
@@ -238,7 +238,6 @@
       "switcher:Ouvrir le sélecteur rapide": false,
       "graph:Ouvrir la vue graphique": false,
       "canvas:Créer un nouveau canvas": false,
-      "daily-notes:Ouvrir la note quotidienne": false,
       "templates:Insérer le modèle": false,
       "command-palette:Ouvrir la palette de commandes": false,
       "bases:Créer une nouvelle base": false,

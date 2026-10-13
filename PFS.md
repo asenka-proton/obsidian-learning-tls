@@ -12,7 +12,7 @@ En d'autres termes : le vol d'une clé aujourd'hui ne permet pas de déchiffrer 
 Imagine un pirate qui enregistre tout le trafic sortant d'une entreprise pendant un an. 
 Si le serveur utilise une méthode d'échange de clés sans PFS (comme le RSA classique) :
 1. Le pirate possède des téraoctets de données chiffrées.
-2. Le pirate réussit, dans un an, à voler la **Clé Privée** du serveur (par un piratage, une faille ou une saisie physique).
+2. Le pirate réussit, dans un an, à voler la **[[Clé Privée]]** du serveur (par un piratage, une faille ou une saisie physique).
 3. Le pirate peut alors déchiffrer **toutes les données des 12 derniers mois**.
 
 C'est un désastre pour la confidentialité à long terme.
