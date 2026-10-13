@@ -83,7 +83,3 @@ sequenceDiagram
 *   **DH** = Permet de créer un secret commun sans le transmettre.
 *   **E** = Garantit que le passé reste secret (PFS).
 *   **Règle d'or** : Si tu vois `TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256` dans un certificat ou une config, c'est que le serveur utilise ECDHE pour créer la clé et RSA pour prouver son identité.
-
----
-
-**Tu as maintenant une compréhension parfaite des mécanismes de création de clés. Tu as terminé le module "Cryptographie et Handshake" !**
