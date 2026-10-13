@@ -9,7 +9,7 @@ Il existe deux grandes familles d'approches pour résoudre ce problème durant l
 
 ---
 
-## 1. L'approche RSA (L'ancienne méthode)
+## 1. L'approche [[RSA]] (L'ancienne méthode)
 
 Dans cette approche, le client utilise la **[[Clé Publique]]** du serveur (contenue dans son [[certificat]]) pour chiffrer directement la [[clé de session]], puis l'envoie au serveur.
 
@@ -18,7 +18,7 @@ Dans cette approche, le client utilise la **[[Clé Publique]]** du serveur (cont
 
 ---
 
-## 2. L'approche Diffie-Hellman (DH)
+## 2. L'approche [[Diffie-Hellman]] (DH)
 
 C'est une révolution mathématique. Ici, le client et le serveur n'envoient **jamais** la clé de session sur le réseau. Ils utilisent des calculs mathématiques pour "arriver" au même résultat de leur côté.
 
@@ -90,4 +90,4 @@ sequenceDiagram
 
 *   **Diffie-Hellman** est la méthode qui permet de créer un secret commun sans jamais l'envoyer sur le réseau.
 *   **ECDHE** est la version moderne, ultra-rapide et sécurisée utilisée par 99% du web actuel.
-*   **Perfect Forward Secrecy (PFS)** est la raison pour laquelle on préfère ECDHE : il garantit que le vol d'une clé privée aujourd'hui ne compromettra pas les données d'hier.
+*   **Perfect Forward Secrecy (PFS)** est la raison pour laquelle on préfère ECDHE : il garantit que le vol d'une [[clé privée]] aujourd'hui ne compromettra pas les données d'hier.
