@@ -82,3 +82,4 @@ openssl x509 -in mon_certificat.crt -text -noout | grep -A 3 "Subject Alternativ
 *   **Utilité** = Permet d'utiliser un seul certificat pour plusieurs sous-domaines ou adresses IP.
 *   **Standard** = C'est le champ que les navigateurs vérifient aujourd'hui (le CN est devenu obsolète).
 *   **Différence** = Le SAN est une liste explicite, le Wildcard est un joker.
+*   Ne pas confondre avec SAN = Storage Area Network (réseau informatique dédié au stockage)
