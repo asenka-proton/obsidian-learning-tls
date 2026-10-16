@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cipher Suite.md",
+                "file": "HMAC.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Cipher Suite"
+              "title": "HMAC"
             },
             "group": "5e050cd0d59163d6"
           }
@@ -36,7 +36,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Cipher Suite.md",
+                "file": "HMAC.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -64,7 +64,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graphique de Cipher Suite"
+              "title": "Graphique de HMAC"
             },
             "group": "5e050cd0d59163d6"
           }
@@ -244,10 +244,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6ec5a54a50f06e75",
+  "active": "489a6bde2a5fb408",
   "lastOpenFiles": [
-    "ECDHE.md",
+    "Hachage.md",
+    "HMAC.md",
     "Cipher Suite.md",
+    "ECDHE.md",
     "SAN.md",
     "Diffie-Hellman.md",
     "Key Exchange.md",
@@ -270,8 +272,6 @@
     "PKI.md",
     "CA.md",
     "Trust Store.md",
-    "Chiffrement.md",
-    "Clé Privée.md",
     "Sans titre 1.base",
     "Sans titre.base"
   ]

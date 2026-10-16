@@ -24,7 +24,7 @@ Prenons un exemple très courant que tu pourrais voir dans les logs d'un serveur
 
 On peut la découper en 4 parties distinctes :
 
-1.  **Échange de clés (Key Exchange) : `ECDHE`**
+1.  **Échange de clés ([[Key Exchange]]) : `ECDHE`**
     *   *Rôle :* Comment on va créer la clé de session.
     *   *Ici :* Utilise le protocole Diffie-Hellman sur courbes elliptiques (ECDHE). C'est ce qui permet le **PFS** (Perfect Forward Secrecy).
 
@@ -32,11 +32,11 @@ On peut la découper en 4 parties distinctes :
     *   *Rôle :* Comment on vérifie l'identité du serveur.
     *   *Ici :* Utilise la clé publique contenue dans le certificat (basée sur l'algorithme RSA).
 
-3.  **Chiffrement de masse (Bulk Encryption) : `AES_128_GCM`**
+3.  **[[Chiffrement]] de masse (Bulk Encryption) : `AES_128_GCM`**
     *   *Rôle :* Comment on chiffre réellement les données (le contenu des pages web, les fichiers, etc.).
     *   *Ici :* Utilise l'algorithme AES avec une clé de 128 bits et le mode GCM (qui garantit aussi l'intégrité).
 
-4.  **Hachage (MAC) : `SHA256`**
+4.  **[[Hachage]] (MAC) : `SHA256`**
     *   *Rôle :* Comment on vérifie que les données n'ont pas été modifiées pendant le trajet.
     *   *Ici :* Utilise l'algorithme SHA-256 pour créer une "empreinte numérique" des données.
 
