@@ -123,7 +123,7 @@ Nous mettons en place le protocole [[TLS]] pour sécuriser le transport.
 
 ### 💡 Conclusion pour le coffre
 
-L'expérience montre que le TLS n'est pas juste "un cadenas". C'est une négociation complexe en plusieurs étapes :
+L'expérience montre que le [[TLS]] n'est pas juste "un cadenas". C'est une négociation complexe en plusieurs étapes :
 1. **Authentification** : Qui es-tu ? (Certificats / CA / TrustStore).
 2. **Négociation** : Comment allons-nous nous parler ? (Cipher Suites / ECDHE).
 3. **Chiffrement** : On parle maintenant en secret (Clés de session symétriques).
