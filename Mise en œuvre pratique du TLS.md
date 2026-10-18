@@ -8,12 +8,14 @@
 
 ---
 
-## 🛠 Étape 1 : Le monde "Sans TLS" (HTTP en clair)
+## 🛠 Étape 1 : Le monde "Sans TLS" (HTTP)
 
 L'objectif est de voir comment les données circulent sans protection.
 
 **Action :** Créer un serveur web ultra-léger en Python.
+
 1. Créer un fichier `server_http.py` :
+
    ```python
    from http.server import HTTPServer, BaseHTTPRequestHandler
 
@@ -31,7 +33,9 @@ L'objectif est de voir comment les données circulent sans protection.
        print(f"Serveur HTTP démarré sur le port {PORT}...")
        httpd.serve_forever()
    ```
+   
 2. Lancer le serveur : `python3 server_http.py`
+
 3. Tester avec `curl http://127.0.0.1:8080`
 
 > **Analyse :** Le message est lisible par n'importe qui sur le réseau. C'est le protocole **HTTP** pur : aucun chiffrement, aucune authentification, aucune intégrité.
@@ -43,32 +47,36 @@ L'objectif est de voir comment les données circulent sans protection.
 Ici, nous créons les briques de confiance. Nous utilisons la cryptographie asymétrique pour établir une identité.
 
 **Action :** Générer une paire de clés et un [[certificat auto-signé]].
+
 1. **Générer la [[Clé Privée]] (`server.key`) :**
-   *C'est notre secret absolu. Il doit rester dans notre KeyStore.*
+   *C'est notre secret absolu. Il doit rester dans notre [[Key Store]].*
    ```bash
    openssl genrsa -out server.key 2048
    ```
+   
 2. **Générer la [[CSR]] (`server.csr`) :**
    *C'est notre formulaire de demande d'identité. On y met notre [[Clé Publique]].*
    ```bash
    openssl req -new -key server.key -out server.csr
    ```
+   
 3. **Générer le [[Certificat Auto-signé]] (`server.crt`) :**
-   *Ici, nous jouons le rôle de la CA (Autorité de Certification) en signant notre propre demande.*
+   *Ici, nous jouons le rôle de la [[CA]] (Autorité de Certification) en [[Signature|signant]] notre propre demande.*
    ```bash
    openssl x509 -req -in server.csr -key server.key -out server.crt -days 365
    ```
 
-> **Note technique :** Ce certificat contient un **[[SAN]] (Subject Alternative Name)** qui permet au serveur de répondre sur plusieurs noms (ex: `localhost`, `127.0.0.1`).
 
 ---
 
-## 🛡️ Étape 3 : Le "Tunnel Sécurisé" ([[HTTPS]] avec [[TLS]])
-Nous mettons en place le protocole TLS pour sécuriser le transport.
+## 🛡️ Étape 3 : Le "Tunnel Sécurisé" ([[HTTPS]])
 
-**Action :** Modifier le serveur pour utiliser le protocole TLS.
+Nous mettons en place le protocole [[TLS]] pour sécuriser le transport.
+
+**Action :** Modifier le serveur pour utiliser le protocole [[TLS]].
+
 1. Créer le fichier `server_ssl.py` :
-2. 
+
    ```python
    from http.server import HTTPServer, BaseHTTPRequestHandler
    import ssl
@@ -82,7 +90,7 @@ Nous mettons en place le protocole TLS pour sécuriser le transport.
            self.end_headers()
            self.wfile.write(b"SECRET_DATA: L'utilisateur est 'Asenka' et son IP est 127.0.0.1")
 
-   # Configuration SSL : On charge notre KeyStore et notre certificat
+   # Configuration SSL : On charge notre Key Store et notre certificat
    context = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)
    context.load_cert_chain(certfile="server.crt", keyfile="server.key")
 
@@ -93,22 +101,25 @@ Nous mettons en place le protocole TLS pour sécuriser le transport.
    print(f"Serveur HTTPS démarré sur le port {PORT}...")
    httpd.serve_forever()
    ```
+   
 2. Lancer le serveur : `python3 server_ssl.py`
-3. Tester avec `curl -k https://127.0.0.1:8443`
-   *(L'option `-k` est nécessaire car notre certificat n'est pas dans le **Trust Store** du système).*
+
+3. Tester avec `curl --insecure https://127.0.0.1:8443`
+   *(L'option `-k / --insecure` est nécessaire car notre certificat n'est pas dans le **[[Trust Store]]** du système).*
 
 ---
 
 ## 📊 Synthèse et Analyse Finale
 
-| Concept | Observation dans l'exercice | Rôle technique |
-| :--- | :--- | :--- |
-| **Clé Privée (`.key`)** | Utilisée par le serveur pour déchiffrer les données. | **KeyStore** : Identité secrète. |
-| **Certificat (`.crt`)** | Envoyé au client pour prouver l'identité. | **Identité Publique** : Utilisée pour le Handshake. |
-| **Handshake** | Le client et le serveur s'accordent sur une clé de session. | **ECDHE** : Échange de clés avec **PFS**. |
-| **Trust Store** | Le `curl` affiche une alerte car il ne connaît pas ma CA. | **Confiance** : Liste des notaires reconnus. |
-| **Cipher Suite** | Le serveur choisit la "recette" de chiffrement. | **Performance** : Équilibre sécurité/vitesse. |
-| **PFS** | Même si `server.key` est volée plus tard, les sessions passées sont sûres. | **Sécurité** : Clés de session éphémères. |
+| Concept                 | Observation dans l'exercice                                                | Rôle technique                                      |
+| :---------------------- | :------------------------------------------------------------------------- | :-------------------------------------------------- |
+| **Clé Privée (`.key`)** | Utilisée par le serveur pour déchiffrer les données.                       | **Key Store** : Identité secrète.                   |
+| **Certificat (`.crt`)** | Envoyé au client pour prouver l'identité.                                  | **Identité Publique** : Utilisée pour le Handshake. |
+| **Handshake**           | Le client et le serveur s'accordent sur une clé de session.                | **ECDHE** : Échange de clés avec **PFS**.           |
+| **Trust Store**         | Le `curl` affiche une alerte car il ne connaît pas ma CA.                  | **Confiance** : Liste des notaires reconnus.        |
+| **Cipher Suite**        | Le serveur choisit la "recette" de chiffrement.                            | **Performance** : Équilibre sécurité/vitesse.       |
+| **PFS**                 | Même si `server.key` est volée plus tard, les sessions passées sont sûres. | **Sécurité** : Clés de session éphémères.           |
+|                         |                                                                            |                                                     |
 
 ### 💡 Conclusion pour le coffre
 
