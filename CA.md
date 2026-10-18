@@ -61,4 +61,6 @@ Parfois, un certificat doit être annulé avant sa date d'expiration (ex: la cl�
 - **[[Trust Store]] = Liste Blanche.** C'est la base de données interne de ton OS/Navigateur qui contient les "Notaires" officiels.
 - **Chaîne de confiance :** Le navigateur remonte le fil (Certificat →→ Intermédiaire →→ Racine) pour vérifier que tout est légitime.
 
----
+## 🌐 Sources
+
+https://developer.mozilla.org/fr/docs/Glossary/Certificate_authority

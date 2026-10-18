@@ -97,3 +97,8 @@ sequenceDiagram
 *   **Certificat ≠ Clé Privée :** Le certificat contient la clé publique. La clé privée reste secrète sur le serveur.
 *   **Certificat ≠ Identité seule :** Un certificat sans signature d'une [[CA|autorité de confiance]] n'a aucune valeur de sécurité.
 *   **CA ([[CA]]) :** Ce sont les "notaires" d'Internet. Ils vérifient l'identité des gens et signent leurs certificats.
+
+## 🌐 Sources
+
+https://www.cloudflare.com/learning/ssl/what-is-an-ssl-certificate/
+https://developer.mozilla.org/fr/docs/Glossary/Digital_certificate

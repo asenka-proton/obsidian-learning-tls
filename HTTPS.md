@@ -45,3 +45,7 @@ graph TD
     style B fill:#bbf,stroke:#333,stroke-width:2px
     style C fill:#bbf,stroke:#333,stroke-width:2px
 ```
+
+## 🌐 Sources
+
+https://developer.mozilla.org/en-US/docs/Glossary/HTTPS

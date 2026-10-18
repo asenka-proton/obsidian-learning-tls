@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mise en œuvre pratique du TLS.md",
+                "file": "Clé Publique.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Mise en œuvre pratique du TLS"
+              "title": "Clé Publique"
             },
             "group": "ba4b61c50674557a"
           }
@@ -36,7 +36,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Mise en œuvre pratique du TLS.md",
+                "file": "Clé Publique.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -64,7 +64,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graphique de Mise en œuvre pratique du TLS"
+              "title": "Graphique de Clé Publique"
             },
             "group": "ba4b61c50674557a"
           }
@@ -102,7 +102,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "certificat de confiance",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -126,8 +126,7 @@
               "title": "Signets"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -245,13 +244,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4d785c58d8780f97",
+  "active": "473b40c03154d206",
   "lastOpenFiles": [
     "Certificat.md",
+    "CA.md",
+    "TLS.md",
+    "HTTPS.md",
+    "SSL.md",
     "Mise en œuvre pratique du TLS.md",
     "OpenSSL.md",
-    "HTTPS.md",
-    "TLS.md",
     "HMAC.md",
     "Hachage.md",
     "Cipher Suite.md",
@@ -271,8 +272,6 @@
     "Clé Publique.md",
     "Certificat auto-signé.md",
     "CRL.md",
-    "OCSP.md",
-    "PKI.md",
     "Sans titre 1.base",
     "Sans titre.base"
   ]

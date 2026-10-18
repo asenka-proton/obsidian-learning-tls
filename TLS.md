@@ -55,3 +55,8 @@ sequenceDiagram
 ```
 
 > Une alternative encore plus sécurisé repose sur une authentification **mutuelle** du **client** et du **serveur**. C'est ce que l'on appelle le [[mTLS]]
+
+## 🌐 Sources
+
+https://www.cloudflare.com/learning/ssl/what-is-tls/
+https://developer.mozilla.org/en-US/docs/Glossary/TLS
