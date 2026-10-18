@@ -67,8 +67,9 @@ Ici, nous créons les briques de confiance. Nous utilisons la cryptographie asym
 Nous mettons en place le protocole TLS pour sécuriser le transport.
 
 **Action :** Modifier le serveur pour utiliser le protocole TLS.
+
 1. Créer le fichier `server_ssl.py` :
-2. 
+
    ```python
    from http.server import HTTPServer, BaseHTTPRequestHandler
    import ssl
@@ -93,6 +94,7 @@ Nous mettons en place le protocole TLS pour sécuriser le transport.
    print(f"Serveur HTTPS démarré sur le port {PORT}...")
    httpd.serve_forever()
    ```
+
 2. Lancer le serveur : `python3 server_ssl.py`
 3. Tester avec `curl -k https://127.0.0.1:8443`
    *(L'option `-k` est nécessaire car notre certificat n'est pas dans le **Trust Store** du système).*
@@ -101,18 +103,16 @@ Nous mettons en place le protocole TLS pour sécuriser le transport.
 
 ## 📊 Synthèse et Analyse Finale
 
-| Concept | Observation dans l'exercice | Rôle technique |
-| :--- | :--- | :--- |
-| **Clé Privée (`.key`)** | Utilisée par le serveur pour déchiffrer les données. | **KeyStore** : Identité secrète. |
-| **Certificat (`.crt`)** | Envoyé au client pour prouver l'identité. | **Identité Publique** : Utilisée pour le Handshake. |
-| **Handshake** | Le client et le serveur s'accordent sur une clé de session. | **ECDHE** : Échange de clés avec **PFS**. |
-| **Trust Store** | Le `curl` affiche une alerte car il ne connaît pas ma CA. | **Confiance** : Liste des notaires reconnus. |
-| **Cipher Suite** | Le serveur choisit la "recette" de chiffrement. | **Performance** : Équilibre sécurité/vitesse. |
-| **PFS** | Même si `server.key` est volée plus tard, les sessions passées sont sûres. | **Sécurité** : Clés de session éphémères. |
+| Concept                     | Observation dans l'exercice                                 | Rôle technique                                      |
+| :-------------------------- | :---------------------------------------------------------- | :-------------------------------------------------- |
+| **[[Clé Privée]] (`.key`)** | Utilisée par le serveur pour déchiffrer les données.        | **[[Key Store]]** : Identité secrète.               |
+| **[[Certificat]] (`.crt`)** | Envoyé au client pour prouver l'identité.                   | **Identité Publique** : Utilisée pour le Handshake. |
+| **[[Handshake]]**           | Le client et le serveur s'accordent sur une clé de session. | **[[ECDHE]]** : Échange de clés avec **[[PFS]]**.   |
+
 
 ### 💡 Conclusion pour le coffre
 
-L'expérience montre que le TLS n'est pas juste "un cadenas". C'est une négociation complexe en plusieurs étapes :
+L'expérience montre que le [[TLS]] n'est pas juste "un cadenas". C'est une négociation complexe en plusieurs étapes :
 1. **Authentification** : Qui es-tu ? (Certificats / CA / TrustStore).
 2. **Négociation** : Comment allons-nous nous parler ? (Cipher Suites / ECDHE).
 3. **Chiffrement** : On parle maintenant en secret (Clés de session symétriques).
